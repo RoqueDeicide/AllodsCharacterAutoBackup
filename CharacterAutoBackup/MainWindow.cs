@@ -66,7 +66,11 @@ namespace CharacterAutoBackup
 				this.CharactersListView.Items.Add(new ListViewItem
 				{
 					Text = character.FileName,
-					SubItems = {character.Size.ToString(), character.LastPlayed.ToString("g")},
+					SubItems =
+					{
+						character.Name, character.Size.ToString(),
+						character.LastPlayed.ToString("g")
+					},
 					Tag = character
 				});
 			}

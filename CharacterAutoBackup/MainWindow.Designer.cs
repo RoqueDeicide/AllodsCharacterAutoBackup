@@ -43,12 +43,13 @@
 			this.UnarchiveButton = new System.Windows.Forms.Button();
 			this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
+			this.CharacterFileSizeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SuspendLayout();
 			// 
 			// RestoreButton
 			// 
 			this.RestoreButton.Enabled = false;
-			this.RestoreButton.Location = new System.Drawing.Point(263, 315);
+			this.RestoreButton.Location = new System.Drawing.Point(315, 313);
 			this.RestoreButton.Name = "RestoreButton";
 			this.RestoreButton.Size = new System.Drawing.Size(70, 23);
 			this.RestoreButton.TabIndex = 5;
@@ -62,6 +63,7 @@
 			this.CharactersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.CharacterFileColumnHeader,
             this.CharacterNameColumnHeader,
+            this.CharacterFileSizeColumnHeader,
             this.LastPlayedColumnHeader});
 			this.CharactersListView.FullRowSelect = true;
 			this.CharactersListView.GridLines = true;
@@ -69,7 +71,7 @@
 			this.CharactersListView.Location = new System.Drawing.Point(12, 12);
 			this.CharactersListView.MultiSelect = false;
 			this.CharactersListView.Name = "CharactersListView";
-			this.CharactersListView.Size = new System.Drawing.Size(242, 324);
+			this.CharactersListView.Size = new System.Drawing.Size(297, 324);
 			this.CharactersListView.TabIndex = 0;
 			this.CharactersListView.UseCompatibleStateImageBehavior = false;
 			this.CharactersListView.View = System.Windows.Forms.View.Details;
@@ -92,7 +94,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(260, 12);
+			this.label2.Location = new System.Drawing.Point(315, 12);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(49, 13);
 			this.label2.TabIndex = 4;
@@ -104,7 +106,7 @@
             this.BackupFileNameColumnHeader,
             this.BackupFileSizeColumnHeader,
             this.BackupFileDateColumnHeader});
-			this.BackupsListView.Location = new System.Drawing.Point(263, 28);
+			this.BackupsListView.Location = new System.Drawing.Point(315, 29);
 			this.BackupsListView.MultiSelect = false;
 			this.BackupsListView.Name = "BackupsListView";
 			this.BackupsListView.Size = new System.Drawing.Size(300, 278);
@@ -131,7 +133,7 @@
 			// ResurrectButton
 			// 
 			this.ResurrectButton.Enabled = false;
-			this.ResurrectButton.Location = new System.Drawing.Point(339, 315);
+			this.ResurrectButton.Location = new System.Drawing.Point(391, 313);
 			this.ResurrectButton.Name = "ResurrectButton";
 			this.ResurrectButton.Size = new System.Drawing.Size(70, 23);
 			this.ResurrectButton.TabIndex = 7;
@@ -144,7 +146,7 @@
 			// UnarchiveButton
 			// 
 			this.UnarchiveButton.Enabled = false;
-			this.UnarchiveButton.Location = new System.Drawing.Point(415, 315);
+			this.UnarchiveButton.Location = new System.Drawing.Point(467, 313);
 			this.UnarchiveButton.Name = "UnarchiveButton";
 			this.UnarchiveButton.Size = new System.Drawing.Size(70, 23);
 			this.UnarchiveButton.TabIndex = 8;
@@ -159,12 +161,17 @@
 			this.RefreshTimer.Interval = 5000;
 			this.RefreshTimer.Tick += new System.EventHandler(this.TriggerRefresh);
 			// 
+			// CharacterFileSizeColumnHeader
+			// 
+			this.CharacterFileSizeColumnHeader.Text = "Size";
+			this.CharacterFileSizeColumnHeader.Width = 50;
+			// 
 			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-			this.ClientSize = new System.Drawing.Size(570, 350);
+			this.ClientSize = new System.Drawing.Size(620, 350);
 			this.Controls.Add(this.UnarchiveButton);
 			this.Controls.Add(this.ResurrectButton);
 			this.Controls.Add(this.BackupsListView);
@@ -194,6 +201,7 @@
 		private System.Windows.Forms.Button RestoreButton;
 		private System.Windows.Forms.ToolTip ToolTip;
 		private System.Windows.Forms.Timer RefreshTimer;
+		private System.Windows.Forms.ColumnHeader CharacterFileSizeColumnHeader;
 	}
 }
 
