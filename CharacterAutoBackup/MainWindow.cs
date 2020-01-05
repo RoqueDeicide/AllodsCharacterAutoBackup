@@ -114,12 +114,15 @@ namespace CharacterAutoBackup
 			foreach (var backup in character.Backups)
 			{
 				var info = new FileInfo(backup);
-				this.BackupsListView.Items.Add(new ListViewItem
+				if (info.Exists)
 				{
-					Text = info.Name,
-					SubItems = {info.Length.ToString(), info.LastWriteTime.ToString("g")},
-					Tag = backup
-				});
+					this.BackupsListView.Items.Add(new ListViewItem
+					{
+						Text = info.Name,
+						SubItems = {info.Length.ToString(), info.LastWriteTime.ToString("g")},
+						Tag = backup
+					});
+				}
 			}
 
 			this.BackupsListView.EndUpdate();
